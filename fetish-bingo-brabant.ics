@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Fetish Social Brabant//Fetish Bingo Brabant//NL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fetish-bingo-brabant-20261206@fetishsocialbrabant.nl
+DTSTAMP:20260903T120000Z
+DTSTART;TZID=Europe/Amsterdam:20261206T150000
+DTEND;TZID=Europe/Amsterdam:20261206T200000
+SUMMARY:Fetish Bingo Brabant
+DESCRIPTION:Fetish Bingo Brabant van Fetish Social Brabant.
+LOCATION:DHG\, Heuvelring 35\, Tilburg
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
