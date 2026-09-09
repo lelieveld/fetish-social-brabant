@@ -45,6 +45,7 @@ const translations={"Over ons":"About us","Agenda":"Events","KEI-TROTS IN FETISH
 const originals=new Map(),walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);while(walker.nextNode()){const n=walker.currentNode,t=n.nodeValue.trim();if(t)originals.set(n,t)}
 function setLanguage(lang,remember=false){originals.forEach((nl,n)=>{n.nodeValue=n.nodeValue.replace(n.nodeValue.trim(),lang==='en'&&translations[nl]?translations[nl]:nl)});document.documentElement.lang=lang;document.querySelectorAll('[data-lang]').forEach(b=>{const active=b.dataset.lang===lang;b.classList.toggle('active',active);b.setAttribute('aria-pressed',active)});if(remember)localStorage.setItem('fsb-language',lang)}
 document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang,true)));setLanguage(localStorage.getItem('fsb-language')==='en'?'en':'nl');
+const polParagraph=document.querySelector('.dj-columns p:nth-child(2)'),polNL=polParagraph.innerHTML,polEN='We are incredibly proud and cannot wait to see him perform at <strong>FURY, the closing party of Beyond Darklands.</strong> And do not worry: Pol will of course remain our resident DJ!';function setPol(lang){polParagraph.innerHTML=lang==='en'?polEN:polNL}document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setPol(b.dataset.lang)));setPol(document.documentElement.lang);
 </script>
 </body>
 </html>
